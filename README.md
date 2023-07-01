@@ -2,7 +2,7 @@
 
 ### Live On
 
-https://hotstar-clone-kk.onrender.com/
+https://hotstar-karthikeya.onrender.com/
 
 #### Demo Video
 
