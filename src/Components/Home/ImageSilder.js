@@ -38,9 +38,7 @@ const ImageSilder = () => {
 
       <Wrapper>
         <Link to="/movie/mv55" key="mv55"  >
-
           <img src="/images/movies/ramsetu.jpg" alt="" />
-
         </Link>
       </Wrapper>
     </Carousel>
@@ -58,9 +56,7 @@ const Carousel = styled(Slider)`
     }
     height: 500px;
   }
-
-  ul li button {
-    
+  ul li button {    
     &:before {
       font-size: 11px;
       color: white;
@@ -70,13 +66,8 @@ const Carousel = styled(Slider)`
     color: white;
   }
   .slick-list {
-    overflow: initial;
-   
-  }
- 
- 
- 
-
+    overflow: initial;   
+  } 
 `;
 
 const Wrapper = styled.div`
@@ -105,23 +96,15 @@ const Wrapper = styled.div`
       -webkit-box-shadow: -1px 1px 5px 6px rgba(173,172,172,0.3);
       -moz-box-shadow: -1px 1px 5px 6px rgba(173,172,172,0.3);
     } 
-
-    height : 520px;
- 
+    height : 520px; 
   }
-
   @media (min-width: 200px )and (max-width : 600px){
      a {
      height: 33vh;
       width:  96vw;
       padding: 2px;
          }
-
-  
-
-
- 
-}
-
+      }
 `;
+
 export default ImageSilder;

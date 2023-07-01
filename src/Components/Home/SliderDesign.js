@@ -53,14 +53,8 @@ export const settings = {
 };
 
 const Action = () => {
-
     return (
-
-
-        <Carousel {...settings}>
-
-        </Carousel>
-
+        <Carousel {...settings}></Carousel>
     )
 }
 
@@ -70,10 +64,7 @@ export const Carousel = styled(Slider)`
 font-family: 'Poppins', sans-serif;  
 .slick-slide {
   margin : 0px 2px;
-    // border : 5px solid green;
-  
-
-  } 
+} 
   z-index:0;
   .slick-next {
      font-size: 15px !important;
@@ -105,8 +96,7 @@ font-family: 'Poppins', sans-serif;
     background: rgb(31,102,170);
     background: radial-gradient(circle, rgba(31,102,170,0.9360994397759104) 46%, rgba(37,158,241,0.6559873949579832) 56%, rgba(22,21,21,0.7288165266106443) 87%);
   }
-}
-  
+}  
 .slick-prev:before, .slick-next:before{
     content: '' !important;
 }
@@ -118,14 +108,10 @@ cursor:pointer;
 z-index:0;
 border-radius: 6px;
 padding: 25px 3px;
-
-
 display:flex;
 align-items :center;
 justify-content:center;
-// border: 5px solid blue;
 object-fit: center;
-
 img {
   inset: 0px;
    object-fit: center;
@@ -142,11 +128,7 @@ img {
 
 }
 
-
-
-
-@media (min-width: 1000px) and (max-width: 1200px) {
-  
+@media (min-width: 1000px) and (max-width: 1200px) {  
     img{
         height: 25vh;
         width:  11vw; 
@@ -158,9 +140,6 @@ img {
         width: 30px;
     }
   }
-
-
-  
 
 
 @media (min-width: 800px) and (max-width: 1000px) {
@@ -178,7 +157,6 @@ img {
   }
   
   @media (min-width: 600px) and (max-width: 800px) {
-  
     img{
         height: 23vh;
         width:  15vw; 
@@ -191,11 +169,7 @@ img {
     }
   }
 
-
-
-
-  @media (min-width: 480px) and (max-width: 600px) {
-  
+@media (min-width: 480px) and (max-width: 600px) {  
     img{
         height: 21vh;
         width:  20vw; 
@@ -206,23 +180,15 @@ img {
     .slick-next{
         width: 30px;
     }
-  }
+  }   
 
-
-   
-
-@media (min-width: 200px) and (max-width: 480px) {
-  
+@media (min-width: 200px) and (max-width: 480px) {  
     img{
         height: 23vh;
         width:  32vw; 
     }
   }
-
-`
-
-
-;
+`;
 
 
 export default Action;

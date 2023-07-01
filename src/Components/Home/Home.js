@@ -2,39 +2,34 @@ import React from 'react'
 import styled from "styled-components";
 import ImageSilder from './ImageSilder';
 import Movies from './Movies';
-import Recommandations from '../Movie_Genres/Recommandations';
-import WebSeries from '../Movie_Genres/WebSeries';
-import Musicalhits from '../Movie_Genres/Musicalhits';
-import Action from '../Movie_Genres/Action';
-import Retro from '../Movie_Genres/Retro';
-import Comedy from '../Movie_Genres/Comedy';
+import Recommandations from '../Genres/Recommandations';
+import WebSeries from '../Genres/WebSeries';
+import Musicalhits from '../Genres/Musicalhits';
+import Action from '../Genres/Action';
+import Retro from '../Genres/Retro';
+import Comedy from '../Genres/Comedy';
 
-const Home = () => {
-
+const Home = (props) => {
+  const { movies } = props;
 
   return (
-    <div>
-   
+    <>
       <Container>
         <ImageSilder />
         <Movies />
-        <Action />
-        <Comedy />
-        <WebSeries />
-        <Musicalhits />
-        <Recommandations />
-        <Retro />
+        <Action movies={movies} />
+        <Comedy movies={movies} />
+        <WebSeries movies={movies} />
+        <Musicalhits movies={movies} />
+        <Recommandations movies={movies} />
+        <Retro movies={movies} />
       </Container>
-    </div>
+    </>
   )
 }
 
-
-
-
 const Container = styled.main`
-
-position: relative;
+  position: relative;
   font-family: 'Poppins', sans-serif;
   min-height: calc(100vh - 250px);
   overflow-x: hidden;
@@ -52,27 +47,10 @@ position: relative;
     opacity: 1;
     z-index: -1;
   }
-
-
-
-  @media (min-width: 200px) and (max-width: 480px) {
-  
+  @media (min-width: 200px) and (max-width: 480px) {  
     padding: 0px 5px;
-
   }
-
-
-
-
-
-
-
   font-family: 'Fredoka One', cursive;
   letter-spacing : 2px;
-
-
-
-
-
 `
 export default Home;

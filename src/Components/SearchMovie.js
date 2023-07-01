@@ -1,36 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const SearchMovie = () => {
-  const [Data, setData] = useState([]);
+const SearchMovie = (props) => {
+  const { movies } = props;
   const [search, setSearch] = useState("");
-  const [MOVIES, setMovie] = useState([]);
-  useEffect(() => {
-
-    fetch(`https://movieapi-kk.onrender.com/movies`)
-      .then((res) => res.json())
-      .then((json) => {
-        const movies = Object.values(json[0]).map(movie => {
-          const convertedMovie = {
-            movie_id: movie.movie_id,
-            movie_genre: movie.movie_genre,
-            movie_name: movie.movie_name,
-            movie_img: movie.movie_img,
-          };
-          return convertedMovie;
-        });
-        setMovie(movies);
-      }
-      );
-
-    const moviesArray = Object.values(MOVIES);
-    setData(moviesArray);
-
-
-  }, [MOVIES]);
-
-
 
   return (
     <Container>
@@ -40,7 +14,7 @@ const SearchMovie = () => {
       </SearchBox>
 
       <MovieList >
-        {Data.filter((movie) => movie.movie_name.toLowerCase().startsWith(search.toLowerCase())).map((movie, index) => (
+        {movies.filter((movie) => movie.movie_name.toLowerCase().startsWith(search.toLowerCase())).map((movie, index) => (
           <Link to={"/movie/" + movie.movie_id} key={movie.movie_id} >
             <Wrapper key={movie.movie_id}>
               <img src={`${movie.movie_img}`} alt="" />
@@ -66,10 +40,8 @@ position: relative;
   margin-top:10px;
   flex-direction:column;
    align-items:center;
-
-
-
-`;
+`
+;
 
 const SearchBox = styled.div`
   width: 35vw;
