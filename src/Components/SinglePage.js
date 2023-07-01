@@ -4,8 +4,6 @@ import styled from "styled-components";
 import Recommandations from "./Genres/Recommandations";
 
 
-
-
 const SinglePage = (props) => {
   const { allmovies } = props;
   const params = useParams();

@@ -5,7 +5,7 @@ import Header from "./Components/Home/Header";
 import SinglePage from "./Components/SinglePage";
 import SearchMovie from "./Components/SearchMovie";
 import { useEffect, useState } from "react";
- function App() {
+function App() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -33,7 +33,18 @@ import { useEffect, useState } from "react";
   }, []);
 
   if (movies.length === 0) {
-    return <div>Loading...</div>;
+    return <div class="center">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
   }
 
   return (
@@ -46,7 +57,7 @@ import { useEffect, useState } from "react";
             path="/"
             element={<Home movies={movies} />}
           />
-          <Route exact path="/search" element={<SearchMovie  movies={movies}/>} />
+          <Route exact path="/search" element={<SearchMovie movies={movies} />} />
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/movie/:movie_id" element={<SinglePage allmovies={movies} />} />
         </Routes>
