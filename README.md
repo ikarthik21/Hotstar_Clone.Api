@@ -2,7 +2,7 @@
 
 ### Live On
 
-https://hotstar-karthikeya.onrender.com/
+https://hotstark.vercel.app/
 
 #### Demo Video
 
